@@ -1,0 +1,38 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef Country Country;
+struct Country{
+   char* name;
+   char* capital;
+   int size;
+   float population;
+};
+
+int get_country(char**argv, Country *c, int *i){
+
+   c -> name = argv[*i];
+   c -> capital = argv[*i + 1];
+   c -> size = argv[*i + 2]
+   c -> population = argv[*i + 3];
+   *i += 4;
+}
+
+void smaller_than(Country *c, int num){
+   for(int i = 0; i < num; i ++){
+      if (c[i].population < 10000){
+         printf("%s\t\t\t; "%s\t\t\t; "%d\t\t\t; "%.2f\n"); 
+      }
+   }
+}
+
+int main(int argc, char * argv[]){
+   Country counties[50];
+   int numberOfCountries = (argc - 1) / 4;
+   int index = 1;
+   for(int i = 1; i < numberOfCountries; i ++){
+      smaller_than(&countries[i], argv, &index);
+   }
+   printf("Country\t\t\tCapital\t\t\tSize\t\t\tPopulation\n");
+   smaller_than(
+}
